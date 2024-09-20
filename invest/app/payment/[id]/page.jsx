@@ -65,7 +65,7 @@ export default function page({params}) {
       const templateParams = {
         from_name: '4Elevenfxtrade',
         reply_to: userEmail,
-        to_email:'amasimarvellous@gmail.com',
+        to_email:'info@4xeleventrade.store',
         page_to: 'request/'+ requestId+'__'+currentUser?.uid,
         type: 'transaction request',
         message: `Hi Admin,
