@@ -42,9 +42,7 @@ export default function page() {
   };
 
   useEffect(() => { 
-    const runFetch = async() =>{
-   try{ 
-     onSnapshot(
+    const onsubT = onSnapshot(
       doc(db, 'userTransactions', currentUser?.uid),
       (docSnapshot) => {
         if (docSnapshot?.exists) {
@@ -57,12 +55,9 @@ export default function page() {
       (error) => {
         console.error("Error fetching transactions data:", error);
       }
-    );}catch(err){
-      console.log(err)
-    }
+    );
 
-    try{
-       onSnapshot(
+    const onsubC = onSnapshot(
       doc(db, 'userCurrents', currentUser?.uid),
       (docSnapshot) => {
         if (docSnapshot?.exists) {
@@ -120,13 +115,15 @@ export default function page() {
       (error) => {
         console.error("Error fetching currents data:", error);
       }
-    );}catch(err){
-      console.log(err)
-    }
-  }
+    );
   
-    return () => {
-      runFetch();
+    return async() => {
+      try{
+      unsubT();
+      unsubC();
+      }catch(err){
+        console.log(err)
+      }
     };
   }, [currentUser.uid]);
 
