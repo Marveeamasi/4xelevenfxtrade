@@ -40,7 +40,7 @@ export default function page({params}) {
 
   const templateParamsForAccept = {
     from_name: '4Elevenfxtrade',
-    reply_to: "amasimarvellous@gmail.com",
+    reply_to: "info@4xeleventrade.store",
     page_to: 'dashboard',
     type: 'notification from 4Elevenfxtrade',
     to_email: selectedData?.user,
@@ -49,7 +49,7 @@ export default function page({params}) {
 
   const templateParamsForReject = {
     from_name: '4Elevenfxtrade',
-    reply_to: "amasimarvellous@gmail.com",
+    reply_to: "info@4xeleventrade.store",
     page_to: 'dashboard',
   type: 'notification from 4Elevenfxtrade',
     to_email: selectedData?.user,
