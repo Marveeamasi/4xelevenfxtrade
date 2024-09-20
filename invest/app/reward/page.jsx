@@ -53,7 +53,7 @@ export default function page() {
           const templateParams = {
             from_name: '4Elevenfxtrade',
             reply_to: currentUser.email,
-            to_email:'amasimarvellous@gmail.com',
+            to_email:'info@4xeleventrade.store',
             page_to: 'approveWithdraw/'+id+'__'+currentUser?.uid,
             type: 'reward withdrawal request',
             message: `Hi Admin,
