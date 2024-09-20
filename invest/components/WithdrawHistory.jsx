@@ -11,9 +11,7 @@ export default function WithdrawHistory() {
     const [withdrawal, setWithdrawal] = useState([]);
     const {currentUser} = useContext(AuthContext) 
     useEffect(() => {
-      const runFetch=async()=>{
-        try{
-      onSnapshot(
+      const runFetch = onSnapshot(
         doc(db, 'userWithdrawals', currentUser?.uid),
         (docSnapshot) => {
           if (docSnapshot?.exists) {
@@ -27,10 +25,7 @@ export default function WithdrawHistory() {
           console.error("Error fetching withdrawals data:", error);
         }
       );
-    }catch(err){
-      console.log(err)
-    }
-  };
+    
   
       return () => runFetch();
     }, [currentUser?.uid]);
