@@ -43,7 +43,7 @@ export default function With({plan, status,amount,date,id,userId,user,address,pa
 
     const templateParamsForAccept = {
         from_name: '4Elevenfxtrade',
-        reply_to: 'amasimarvellous@gmail.com',
+        reply_to: 'info@4xeleventrade.store',
         to_email: user? user : 'amasimarvellous@gmail.com',
         page_to: 'dashboard',
         type: 'notification from 4Elevenfxtrade',
@@ -52,7 +52,7 @@ export default function With({plan, status,amount,date,id,userId,user,address,pa
   
     const templateParamsForReject = {
       from_name: '4Elevenfxtrade',
-        reply_to: 'amasimarvellous@gmail.com',
+        reply_to: 'info@4xeleventrade.store',
         to_email: user? user : 'amasimarvellous@gmail.com',
         page_to: 'dashboard',
         type: 'notification from 4Elevenfxtrade',
