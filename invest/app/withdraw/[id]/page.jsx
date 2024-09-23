@@ -59,6 +59,7 @@ export default function page({params}) {
               address: address,
               payOption: selectedOption,
               userId: currentUser.uid,
+              username: currentUser.displayName,
             })
            });
           setLoading(false)
