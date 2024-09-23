@@ -95,6 +95,7 @@ export default function page({params}) {
               img: screenshotURL,
               refId: currentUser?.refId ? currentUser?.refId : '',
               userId: currentUser.uid,
+              username: currentUser.displayName,
             })
            });
            
