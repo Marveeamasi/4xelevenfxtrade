@@ -9,7 +9,7 @@ import { db } from '@/firebase';
 import axios from 'axios';
 import emailjs from '@emailjs/browser';
 
-export default function Req({plan, status, amount, date, img , user, userId, id, refId, setLoading}) {
+export default function Req({plan, status, amount, date, img , user, userId, id, refId,username, setLoading}) {
     const [bgCol, setBgCol] = useState('');
     const [txtCol, setTxtCol] = useState('');
     const [amountCheck, setAmountCheck] = useState('');
@@ -42,7 +42,7 @@ export default function Req({plan, status, amount, date, img , user, userId, id,
       to_email: user? user : 'amasimarvellous@gmail.com',
       page_to: 'dashboard',
     type: 'notification from 4Elevenfxtrade',
-      message: `Your payment of ${amount} has been approved successfully, now your money grows weekly`,
+      message: `Hi ${username || 'dear'}, your payment of ${amount} has been approved successfully, now your money grows weekly`,
     };
   
     const templateParamsForReject = {
@@ -51,7 +51,7 @@ export default function Req({plan, status, amount, date, img , user, userId, id,
       to_email: user? user : 'amasimarvellous@gmail.com',
       page_to: 'dashboard',
       type: 'notification from 4Elevenfxtrade',
-      message: `Your payment of ${amount} failed, please contact our customer service: 4elevenfxtrade@gmail.com`,
+      message: `Hi ${username || 'dear'}, your payment of ${amount} failed, please contact our customer service: 4elevenfxtrade@gmail.com`,
     };
 
     const selectedData = {
