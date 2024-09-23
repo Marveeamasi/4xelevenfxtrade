@@ -8,7 +8,7 @@ import { IoHandLeft } from "react-icons/io5";
 import { IoMdThumbsDown } from "react-icons/io";
 import emailjs from '@emailjs/browser';
 
-export default function With({plan, status,amount,date,id,userId,user,address,payOption, setLoading}) {
+export default function With({plan, status,amount,date,id,userId,user,address,payOption,username, setLoading}) {
     const [textCol, setTextCol] = useState('')
     const [editable, setEditable] = useState('');
     useEffect(()=>{
@@ -47,7 +47,7 @@ export default function With({plan, status,amount,date,id,userId,user,address,pa
         to_email: user? user : 'amasimarvellous@gmail.com',
         page_to: 'dashboard',
         type: 'notification from 4Elevenfxtrade',
-        message: `Your withdrawal of ${amount} from ${plan} has been approved, incase you haven't been credited in less than 23 hrs please contact our customer service: 4elevenfxtrade@gmail.com`, 
+        message: `Hi ${username || 'dear'}, your withdrawal of ${amount} from ${plan} has been approved, incase you haven't been credited in less than 23 hrs please contact our customer service: 4elevenfxtrade@gmail.com`, 
     };
   
     const templateParamsForReject = {
@@ -56,7 +56,7 @@ export default function With({plan, status,amount,date,id,userId,user,address,pa
         to_email: user? user : 'amasimarvellous@gmail.com',
         page_to: 'dashboard',
         type: 'notification from 4Elevenfxtrade',
-        message: `Your withdrawal of ${amount} from ${plan} failed, please contact our customer service: 4elevenfxtrade@gmail.com`, 
+        message: `Hi ${username || 'dear'}, your withdrawal of ${amount} from ${plan} failed, please contact our customer service: 4elevenfxtrade@gmail.com`, 
      };
   
     const handleReject = async () => {
