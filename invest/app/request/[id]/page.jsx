@@ -44,7 +44,7 @@ export default function page({params}) {
     page_to: 'dashboard',
     type: 'notification from 4Elevenfxtrade',
     to_email: selectedData?.user,
-    message: `Your payment of ${amount} has been approved successfully, now your money grows weekly`,
+    message: `Hi ${selectedData?.username || 'dear'}, your payment of ${amount} has been approved successfully, now your money grows weekly`,
   };
 
   const templateParamsForReject = {
@@ -53,7 +53,7 @@ export default function page({params}) {
     page_to: 'dashboard',
   type: 'notification from 4Elevenfxtrade',
     to_email: selectedData?.user,
-    message: `Your payment of ${amount} failed, please contact our customer service: 4elevenfxtrade@gmail.com`,
+    message: `Hi ${selectedData?.username || 'dear'}, your payment of ${amount} failed, please contact our customer service: 4elevenfxtrade@gmail.com`,
   };
 
   const handleReject = async () => {
