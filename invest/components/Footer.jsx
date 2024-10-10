@@ -40,8 +40,9 @@ export default function Footer() {
       <h1 className='text-2xl'>Socials</h1>
       <hr className='w-10 bg-col h-1'/>
       <div className='flex gap-5 items-center'>
-      <a href="https://www.instagram.com/_4xeleventrades?igsh=eXowYXBza3c1Nmpi" target="_blank" className='text-2xl text-[#a2a1ab] hover:text-[#eee]'><FaInstagramSquare/></a>
+      <!--a href="https://www.instagram.com/_4xeleventrades?igsh=eXowYXBza3c1Nmpi" target="_blank" className='text-2xl text-[#a2a1ab] hover:text-[#eee]'><FaInstagramSquare/></a-->
       <a href="https://api.whatsapp.com/send?phone=19367209438" target="_blank" className='text-2xl text-[#a2a1ab] hover:text-[#eee]'><FaWhatsappSquare/></a>
+      <a href="https://www.facebook.com/share/r35f3RWicTbJcb8e/?mibextid=kFxxJD" className='text-2xl text-[#a2a1ab] hover:text-[#eee]'><FaFacebookSquare/></a>
       </div>
     </div>
   </div>
